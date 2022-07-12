@@ -1,7 +1,7 @@
 {
   "name": "discord.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "The discord.js project realized in javascripth is a discord bot realized with the discord api, discordAPI. For the moment this project is under development so some features will not be available immediately, but for the moment the necessary is present I specify take the time to read the following file that explains how to use the bot properly.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
