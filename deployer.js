@@ -1,8 +1,6 @@
-// Appelle des libraries.
 const path = require('path');
 const { readdirSync } = require('fs');
 
-// Appelle des commandes
 const commands = [];
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = readdirSync(commandsPath).filter(file => file.endsWith('.js'));
@@ -13,16 +11,14 @@ for (const file of commandFiles) {
 	commands.push(command.data.toJSON());
 }
 
-// Appelle des libraries.
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 
-// Appelle de la config et actualisation des commandes.
 const dotenv = require('dotenv');
 dotenv.config();
 
-const rest = new REST({ version: '9' }).setToken(process.env.authenticationkey);
+const rest = new REST({ version: '9' }).setToken(process.env.token);
 
-rest.put(Routes.applicationGuildCommands(process.env.botId, process.env.guildId), { body: commands })
-	.then(() => console.log('les slash commandes sont actualisés.'))
+rest.put(Routes.applicationGuildCommands(process.env.clientid, process.env.serverid), { body: commands })
+	.then(() => console.log('commands updated.. !'))
 	.catch(console.error);
