@@ -1,13 +1,13 @@
 {
-  "name": "louloutre",
+  "name": "discord.js",
   "version": "1.0.0",
-  "description": "Louloutre is a open source bot for discord application.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "louloutre"
+    "discord.js"
   ],
   "author": "kazotka",
   "license": "MIT",
